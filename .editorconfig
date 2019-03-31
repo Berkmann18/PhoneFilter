@@ -1,0 +1,9 @@
+[*.{js,html}]
+tab_width=2
+indent_size=2
+
+[*.css]
+indent_size=1
+
+[*.*]
+charset=UTF-8
