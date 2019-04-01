@@ -43,7 +43,11 @@ const displayPhones = (phoneList) => {
 };
 
 $(document).ready(() => {
-  $.getJSON('products.json', displayPhones);
+  let phones = [];
+  $.getJSON('products.json', (data) => {
+    phones = data;
+    displayPhones(phones);
+  });
   $('#search').on('change', function () {
     displayPhones(filter(phones, this.value));
   });
