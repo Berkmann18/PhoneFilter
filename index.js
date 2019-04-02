@@ -6,7 +6,6 @@
  * @param {string} filterTerm Filter word
  */
 const filter = (phoneList, filterTerm) => {
-  console.log('filter=', filterTerm);
   if (!filterTerm) return phoneList;
   return phoneList.filter(phone => {
     let matchingText = phone.name.includes(filterTerm) || phone.specs.manufacturer.includes(filterTerm)
